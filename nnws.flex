@@ -1,7 +1,8 @@
 %%
 %int
 %%
-[a-zA-Z]+  { return 1; }
-[0-9]+     { return 2; }
-[ \t\r\n]+ {  }
+[a-zA-Z]+  { return simple.scan(1); }
+[0-9]+     { return simple.scan(2); }
+[ \t]+     {  }
+\r?\n      {  simple.increment_lineno(); }
 .          {  simple.lexErr("unrecognized character"); }
