@@ -1,5 +1,6 @@
 %%
 %int
+%%
 "/*"([^*]|"*"+[^/*])*"*"+"/"  { jZero.comment(); }
 "//".*\r?\n                   { jZero.comment(); }
 [ \t\r\f]+                    { jZero.whitespace(); }
@@ -39,7 +40,7 @@
 "<="                          { return jZero.scan(parser.LESSTHANOREQUAL); }
 ">"                           { return jZero.scan(jZero.ord(">")); }
 ">="                          { return jZero.scan(parser.GREATERTHANOREQUAL); }
-"=="                          { return jZero.scan(parser.ISEQUALTTO); }
+"=="                          { return jZero.scan(parser.ISEQUALTO); }
 "!="                          { return jZero.scan(parser.NOTEQUALTO); }
 "&&"                          { return jZero.scan(parser.LOGICALAND); }
 "||"                          { return jZero.scan(parser.LOGICALOR); }

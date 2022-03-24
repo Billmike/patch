@@ -20,7 +20,7 @@ public class simple {
         System.exit(1);
     }
     public static int scan(int cat) {
-        yylval = new token(cat, lex.yytext(), yylineno);
+        // yylval = new token(cat, lex.yytext(), yylineno);
         return cat;
     }
     public static void increment_lineno() {
